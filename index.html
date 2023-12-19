@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>Camera Intent Test</h2>
+
+  <button onclick="sendCameraIntent()">Send Camera Intent</button>
+
+  <script>
+    function sendCameraIntent() {
+      // You can customize the data you want to send
+      var data = {
+        type: 'camera',
+        message: 'Take a picture',
+      };
+      
+      // Send the camera intent to the Flutter app
+      window.flutter_inappwebview.callHandler('cameraIntentChannel', JSON.stringify(data));
+    }
+  </script>
+
+</body>
+
+</html>
